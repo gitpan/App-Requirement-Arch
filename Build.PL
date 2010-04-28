@@ -212,6 +212,7 @@ my $build = $class->new
 		'Text::Pluralize' => 0,
 		'Tie::IxHash' => 0,
 		'Devel::Cycle' => 0,
+		'App::Chained' => 0,
 		},
 		
 	pm_files     => \%all_modules,
@@ -225,6 +226,7 @@ my $build = $class->new
 		'scripts/field_filters/requirement_fields.pl',
 		'scripts/field_filters/flat_requirement_fields.pl',
 		'scripts/field_filters/test_requirement_fields.pl',
+		'scripts/ra',
 		'scripts/ra_edit.pl',
 		'scripts/ra_show.pl',
 		'scripts/ra_show_flat.pl',

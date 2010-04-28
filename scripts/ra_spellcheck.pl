@@ -52,6 +52,17 @@ croak 'Error parsing options!'unless
 		(
 		'h|help' => \&display_help, 
 		'user_dictionary=s' => \$user_dictionary,
+		
+		'dump_options' => 
+			sub 
+				{
+				print join "\n", map {"-$_"} 
+					qw(
+					user_dictionary
+					help
+					) ;
+				exit(0) ;
+				},
 		) ;
 
 @ARGV || die display_help() ;

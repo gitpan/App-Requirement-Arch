@@ -45,6 +45,17 @@ die 'Error parsing options!'unless
 		(
 		'master_template_file=s' => \$master_template_file,
 		'h|help' => \&display_help, 
+		
+		'dump_options' => 
+			sub 
+				{
+				print join "\n", map {"-$_"} 
+					qw(
+					master_template_file
+					help
+					) ;
+				exit(0) ;
+				},
 		) ;
 
 ($master_template_file, $master_categories_file)  = get_template_files($master_template_file, $master_categories_file)   ;

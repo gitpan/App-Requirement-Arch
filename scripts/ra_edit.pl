@@ -75,6 +75,25 @@ die 'Error parsing options!'unless
 		'no_backup' => \$no_backup,
 		'no_check_categories' => \$no_check_categories,
 		'h|help' => \&display_help, 
+		
+		'dump_options' => 
+			sub 
+				{
+				print join "\n", map {"-$_"} 
+					qw(
+					master_template_file
+					master_categories_file
+					free_form_template
+					no_spellcheck
+					raw
+					no_backup
+					no_check_categories
+					help
+					) ;
+					
+				exit(0) ;
+				},
+
 		) ;
 
 ($master_template_file, $master_categories_file, $free_form_template)  

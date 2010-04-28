@@ -123,6 +123,29 @@ die 'Error parsing options!'unless
 		'master_categories_file=s' => \$master_categories_file,
 		'requirement_fields_filter_file=s' => \$requirement_fields_filter_file, 
 		'h|help' => \&display_help, 
+		
+		'dump_options' => 
+			sub 
+				{
+				print join "\n", map {"-$_"} 
+					qw(
+					include_type
+					include_description_data
+					include_categories
+					remove_empty_requirement_field_in_categories
+					include_not_found
+					include_statistics
+					show_abstraction_level
+					format
+					include_loaded_from
+					master_template_file
+					master_categories_file
+					requirement_fields_filter_file
+					help
+					) ;
+				exit(0) ;
+				},
+		
 		) ;
 
 display_help() unless @ARGV ;

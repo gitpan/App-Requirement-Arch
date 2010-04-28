@@ -1,4 +1,17 @@
-commit ca5daf437c4bf9b6b51481a18cb8d0f699757bee (HEAD, master)
+commit d479b4022b84856262eb783c9a3150e7d3ce8a52 (HEAD, master)
+Author: nadim khemir <nkh@cpan.org>
+Date:   Mon Apr 26 08:34:51 2010 +0200
+
+    CHANGED: extract ra help directly from pod
+    CHANGED: documentation about completion script generation
+
+commit c32983ddb944107510a79c2e1396284b39c06a56
+Author: nadim khemir <nkh@cpan.org>
+Date:   Mon Apr 26 00:32:25 2010 +0200
+
+    ADDED: front end "ra" and bash completion
+
+commit ca5daf437c4bf9b6b51481a18cb8d0f699757bee
 Author: nadim khemir <nkh@cpan.org>
 Date:   Fri Apr 16 01:05:44 2010 +0200
 

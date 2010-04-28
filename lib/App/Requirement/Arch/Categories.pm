@@ -18,7 +18,7 @@ BEGIN
 {
 use Sub::Exporter -setup => 
 	{
-	exports => [ qw(linherit_categories merge_and_check_master_category_definition merge_master_categories) ],
+	exports => [ qw(inherit_categories merge_and_check_master_category_definition merge_master_categories) ],
 	groups  => 
 		{
 		all  => [ qw() ],

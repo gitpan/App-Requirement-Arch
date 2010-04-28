@@ -1,3 +1,5 @@
+#!/usr/bin/perl
+
 use strict ;
 use warnings ;
 
@@ -7,8 +9,8 @@ use Data::TreeDumper ;
 use Getopt::Long;
 use File::Slurp;
 
-use App::Requirement::Arch::Requirements qw(get_files_to_check load_requirement load_master_template) ;
-use App::Requirement::Arch qw(get_template_files) ;
+use App::Requirement::Arch::Requirements qw(get_files_to_check load_requirement) ;
+use App::Requirement::Arch qw(get_template_files load_master_template) ;
 
 #------------------------------------------------------------------------------------------------------------------
 
@@ -58,6 +60,22 @@ die 'Error parsing options!'unless
 		'show_collapse_button' => \$show_collapse_button,
 		'title=s'	 => \$html_title,
 		'header_file=s'	 => \$header_file,
+		
+		'dump_options' => 
+			sub 
+				{
+				print join "\n", map {"-$_"} 
+					qw(
+					master_template_file
+					help
+					show_collapsed
+					show_collapse_button
+					title
+					header_file
+					) ;
+				exit(0) ;
+				},
+		
 		);
 
 
